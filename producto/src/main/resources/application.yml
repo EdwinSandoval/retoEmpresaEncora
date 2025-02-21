@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: service-producto
+  cloud:
+    config:
+      profile: dev
+  datasource:
+    url: jdbc:h2:mem:producto
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+    defer-datasource-initialization: true
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8003
+
+#link acceso a swagger
+#http://localhost:8003/swagger-ui/index.html#/

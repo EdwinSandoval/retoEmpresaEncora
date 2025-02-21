@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "15b3ace5-84c1-4509-906d-556351994599",
+		"name": "examen encora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20894673",
+		"_collection_link": "https://grey-sunset-35373.postman.co/workspace/Team-Workspace~3ad62ab4-da43-4e05-8d8e-ee1a1322e00e/collection/20894673-15b3ace5-84c1-4509-906d-556351994599?action=share&source=collection_link&creator=20894673"
+	},
+	"item": [
+		{
+			"name": "listarProductos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "",
+						"username": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8003/producto/listar"
+			},
+			"response": []
+		},
+		{
+			"name": "GuardarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n        \"nombre\": \"Jaime4 Sandoval\",\r\n        \"precio\": 5.0,\r\n        \"cantidad\":24\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8003/producto/guardar"
+			},
+			"response": []
+		},
+		{
+			"name": "updateProducto",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "adminpass",
+						"username": "admin"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Jaime4 Sandoval\",\r\n        \"precio\": 6.0,\r\n        \"cantidad\":24\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8003/producto/actualizar/4"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarProducto",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "user"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8003/cliente/eliminar/3"
+			},
+			"response": []
+		},
+		{
+			"name": "buscarIdProducto",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "adminpass",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8003/producto/buscar/2"
+			},
+			"response": []
+		}
+	]
+}
